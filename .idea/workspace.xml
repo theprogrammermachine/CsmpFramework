@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="49d7e6d2-732d-4368-9dc0-27ebed1cadc3" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/rxbus/target/" />
+    <ignored path="$PROJECT_DIR$/csmp/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/home/Program.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="292" selection-start-line="292" selection-end-line="292" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3693#5283#0" expanded="true" />
+                <element signature="e#5282#5283#0" expanded="true" />
+                <element signature="method#onMessageReceived#0;class#Program#0" />
+                <element signature="method#onUserJoint#0;class#Program#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>@Ignore</find>
+      <find>@Nullable</find>
+      <find>@NonNull</find>
+      <find>static</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/csmp/src/main/java/retrofit/RobotHandler.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/retrofit/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/callbacks/terminal/OnFileMessageCreated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/callbacks/terminal/OnTextMessageCreated.java" />
+        <option value="$PROJECT_DIR$/src/main/java/home/Main.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/UserJointComplex.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MessageDeleted.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/signalr/HubConnection.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileDownloaded.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MemberAccessUpdated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/RoomRemoved.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/BotProfileUpdated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/WorkerRemoved.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/RoomProfileUpdated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileDownloadCancelled.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileUploadCancelled.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/interfaces/interfaces/IAnimToUpdate.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/interfaces/interfaces/IMirrorEffect.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/interfaces/interfaces/INotifyValueChange.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileTransferProgressed.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileRegistered.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileUploaded.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileUploading.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileDownloading.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/ComplexProfileUpdated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/ComplexesCreated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MessageSending.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/RoomsCreated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/WorkerAdded.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/UserProfileUpdated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/WorkerUpdated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/models/Pair.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/helpers/LogHelper.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MessageSeen.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/retrofit/NotifHandler.java" />
+        <option value="$PROJECT_DIR$/csmp/pom.xml" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/retrofit/BotHandler.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/helpers/JsonHelper.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/helpers/NetworkHelper.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/models/Tuple2.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/callbacks/terminal/OnBotViewInitialized.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/models/Packet.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/models/Bindings.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/models/Codes.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/helpers/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/retrofit/ComplexHandler.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/CsmpInitiated.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/models/Notifications.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/models/CSMP.java" />
+        <option value="$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/UserRequestedBotView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/home/Program.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="csmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="csmp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="csmp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="csmp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="csmp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstAsemanCSMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstAsemanCSMP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552421120920" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Android/AsemanAndroidClient/rxbus" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My Documents\Projects\Java\FirstAsemanCSMP\csmp\src\main\java\models" />
+      <recent name="D:\My Documents\Projects\Java\FirstAsemanCSMP\csmp\src\main\java\interfaces" />
+      <recent name="D:\My Documents\Projects\Java\FirstAsemanCSMP\csmp\src\main\java\retrofit" />
+      <recent name="D:\My Documents\Projects\Java\FirstAsemanCSMP\csmp\src\main\java\signalr" />
+      <recent name="D:\My Documents\Projects\Java\FirstAsemanCSMP\csmp\src\main\java\rxbus" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="home.Program" />
+      <module name="FirstAsemanCSMP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Program" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49d7e6d2-732d-4368-9dc0-27ebed1cadc3" name="Default Changelist" comment="" />
+      <created>1552128718528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552128718528</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2751678" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Captures" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="UI Designer" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Logcat" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/callbacks/terminal/OnTextMessageCreated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/UserJointComplex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MessageDeleted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileDownloaded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MemberAccessUpdated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/RoomRemoved.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/BotProfileUpdated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/WorkerRemoved.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/RoomProfileUpdated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileDownloadCancelled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileUploadCancelled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileTransferProgressed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileRegistered.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileUploaded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileUploading.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileReceived.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/FileDownloading.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/ComplexProfileUpdated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/ComplexesCreated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MessageSending.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/RoomsCreated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/WorkerAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/UserProfileUpdated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/WorkerUpdated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/helpers/LogHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/MessageSeen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/retrofit/NotifHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/interfaces/INotifyValueChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/interfaces/IMirrorEffect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/interfaces/IMainThreadRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/interfaces/IAnimToUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/signalr/HubConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/signalr/JsonHubProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="217" selection-start-line="217" selection-end-line="217" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/Tuple2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding>
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/retrofit/BotHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/callbacks/terminal/OnBotViewInitialized.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/Packet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="427" column="5" lean-forward="true" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
+          <folding>
+            <element signature="e#10311#10312#0" expanded="true" />
+            <element signature="e#10341#10342#0" expanded="true" />
+            <element signature="e#10387#10388#0" expanded="true" />
+            <element signature="e#10420#10421#0" expanded="true" />
+            <element signature="e#10488#10489#0" expanded="true" />
+            <element signature="e#10520#10521#0" expanded="true" />
+            <element signature="e#10571#10572#0" expanded="true" />
+            <element signature="e#10613#10614#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/helpers/JsonHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/Bindings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="148" column="5" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/Codes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/helpers/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/retrofit/ComplexHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/CsmpStarted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/helpers/NetworkHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1373">
+          <caret line="319" selection-start-line="319" selection-end-line="319" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/Notifications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+          <folding>
+            <element signature="e#3733#3734#0" expanded="true" />
+            <element signature="e#3768#3769#0" expanded="true" />
+            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="e#3859#3860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/models/CSMP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="638" column="110" selection-start-line="638" selection-start-column="110" selection-end-line="638" selection-end-column="110" />
+          <folding>
+            <element signature="e#1085#3377#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csmp/src/main/java/rxbus/notifications/UserRequestedBotView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/home/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3693#5283#0" expanded="true" />
+            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="method#onMessageReceived#0;class#Program#0" />
+            <element signature="method#onUserJoint#0;class#Program#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
