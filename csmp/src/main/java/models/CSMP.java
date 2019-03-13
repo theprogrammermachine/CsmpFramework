@@ -644,6 +644,11 @@ public class CSMP {
     private void onBotAddedToRoom(Notifications.BotAddedToRoomNotification notif) {
         LogHelper.log("Aseman", "Received Bot Added notification");
 
+        if (!DatabaseHelper.getWorkerIds().contains(notif.getWorkership().getWorkershipId()))
+            DatabaseHelper.getWorkerships().add(notif.getWorkership());
+
+        BusHelper.bus().post(new BotAddedToRoom(notif.getWorkership()));
+
         notifyServerNotifReceived(notif.getNotificationId());
     }
 
@@ -693,6 +698,7 @@ public class CSMP {
         Entities.Membership mem = ujcn.getMembership();
 
         BusHelper.bus().post(new MembershipCreated(mem));
+        BusHelper.bus().post(new UserJointComplex(mem));
 
         notifyServerNotifReceived(ujcn.getNotificationId());
     }

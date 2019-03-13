@@ -103,23 +103,14 @@ public class Notifications {
     }
 
     public static class BotAddedToRoomNotification extends Notification {
-        private long roomId;
-        private Entities.Room room;
+        private Entities.Workership workership;
 
-        public long getRoomId() {
-            return roomId;
+        public Entities.Workership getWorkership() {
+            return workership;
         }
 
-        public void setRoomId(long roomId) {
-            this.roomId = roomId;
-        }
-
-        public Entities.Room getRoom() {
-            return room;
-        }
-
-        public void setRoom(Entities.Room room) {
-            this.room = room;
+        public void setWorkership(Entities.Workership workership) {
+            this.workership = workership;
         }
     }
 

@@ -1,13 +1,12 @@
 package home;
 
 import callbacks.terminal.OnBotViewInitialized;
+import helpers.DatabaseHelper;
 import models.*;
 import rxbus.Subscribe;
-import rxbus.notifications.CsmpStarted;
-import rxbus.notifications.MessageReceived;
-import rxbus.notifications.UserJointComplex;
-import rxbus.notifications.UserRequestedBotView;
+import rxbus.notifications.*;
 
+import java.lang.reflect.Member;
 import java.util.*;
 
 public class Program {
@@ -145,163 +144,173 @@ public class Program {
     }
 
     @Subscribe
+    public void onBotAddedToRoom(BotAddedToRoom botAddedToRoom) {
+        spinning.put(botAddedToRoom.getWorkership().getRoom().getComplex().getComplexId(), true);
+        for (Entities.Membership member : botAddedToRoom.getWorkership().getRoom().getComplex().getMembers()) {
+            pushInitialHomeViewToClient(
+                    botAddedToRoom.getWorkership().getRoom().getComplex().getComplexId(),
+                    botAddedToRoom.getWorkership().getRoom().getRoomId(),
+                    member.getUser());
+        }
+    }
+
+    @Subscribe
     public void onUserRequestedBotView(UserRequestedBotView userRequestedBotView) {
+        pushInitialHomeViewToClient(userRequestedBotView.getComplexId(), userRequestedBotView.getRoomId(), userRequestedBotView.getUser());
+    }
 
-        csmp.initBotView(userRequestedBotView.getComplexId(), userRequestedBotView.getRoomId()
-                , userRequestedBotView.getUser().getBaseUserId(), initHomeView(userRequestedBotView.getUser().getTitle())
-                , new OnBotViewInitialized() {
-                    @Override
-                    public void botViewInitialized() {
+    private void pushInitialHomeViewToClient(long complexId, long roomId, Entities.User user) {
+        csmp.initBotView(complexId, roomId
+                , user.getBaseUserId(), initHomeView(user.getTitle())
+                , () -> {
+                    Codes.Value colorWhite = new Codes.Value();
+                    colorWhite.setValueType(Codes.DataType.STRING);
+                    colorWhite.setValue("#0000ff");
 
-                        Codes.Value colorWhite = new Codes.Value();
-                        colorWhite.setValueType(Codes.DataType.STRING);
-                        colorWhite.setValue("#0000ff");
+                    Codes.Value colorBlack = new Codes.Value();
+                    colorBlack.setValueType(Codes.DataType.STRING);
+                    colorBlack.setValue("#00ff00");
 
-                        Codes.Value colorBlack = new Codes.Value();
-                        colorBlack.setValueType(Codes.DataType.STRING);
-                        colorBlack.setValue("#00ff00");
+                    Codes.Value boolTrue = new Codes.Value();
+                    boolTrue.setValueType(Codes.DataType.BOOL);
+                    boolTrue.setValue(true);
 
-                        Codes.Value boolTrue = new Codes.Value();
-                        boolTrue.setValueType(Codes.DataType.BOOL);
-                        boolTrue.setValue(true);
+                    Codes.Value boolFalse = new Codes.Value();
+                    boolFalse.setValueType(Codes.DataType.BOOL);
+                    boolFalse.setValue(false);
 
-                        Codes.Value boolFalse = new Codes.Value();
-                        boolFalse.setValueType(Codes.DataType.BOOL);
-                        boolFalse.setValue(false);
+                    List<Codes.Code> codes = new ArrayList<>();
 
-                        List<Codes.Code> codes = new ArrayList<>();
+                    Codes.Variable colorFlag = new Codes.Variable();
+                    colorFlag.setName("colorFlag");
+                    colorFlag.setValue(boolTrue);
 
-                        Codes.Variable colorFlag = new Codes.Variable();
-                        colorFlag.setName("colorFlag");
-                        colorFlag.setValue(boolTrue);
+                    Codes.Definition colorFlagDefinition = new Codes.Definition();
+                    colorFlagDefinition.setVariable(colorFlag);
+                    codes.add(colorFlagDefinition);
 
-                        Codes.Definition colorFlagDefinition = new Codes.Definition();
-                        colorFlagDefinition.setVariable(colorFlag);
-                        codes.add(colorFlagDefinition);
+                    Codes.Variable bcVar = new Codes.Variable();
+                    bcVar.setName("bc");
+                    bcVar.setValue(colorWhite);
 
-                        Codes.Variable bcVar = new Codes.Variable();
-                        bcVar.setName("bc");
-                        bcVar.setValue(colorWhite);
+                    Codes.Definition bcVarDefinition = new Codes.Definition();
+                    bcVarDefinition.setVariable(bcVar);
+                    codes.add(bcVarDefinition);
 
-                        Codes.Definition bcVarDefinition = new Codes.Definition();
-                        bcVarDefinition.setVariable(bcVar);
-                        codes.add(bcVarDefinition);
+                    Codes.Variable tcVar = new Codes.Variable();
+                    tcVar.setName("tc");
+                    tcVar.setValue(colorBlack);
 
-                        Codes.Variable tcVar = new Codes.Variable();
-                        tcVar.setName("tc");
-                        tcVar.setValue(colorBlack);
+                    Codes.Definition tcVarDefinition = new Codes.Definition();
+                    tcVarDefinition.setVariable(tcVar);
+                    codes.add(tcVarDefinition);
 
-                        Codes.Definition tcVarDefinition = new Codes.Definition();
-                        tcVarDefinition.setVariable(tcVar);
-                        codes.add(tcVarDefinition);
+                    Codes.ModifyMirror modifyBcMirror = new Codes.ModifyMirror();
+                    Bindings.Mirror bcVarMirror = new Bindings.MirrorToBorderColor();
+                    bcVarMirror.setAction(Bindings.Mirror.ActionType.BIND);
+                    bcVarMirror.setCtrlName("box");
+                    bcVarMirror.setVarName("bc");
+                    modifyBcMirror.setMirror(bcVarMirror);
+                    codes.add(modifyBcMirror);
 
-                        Codes.ModifyMirror modifyBcMirror = new Codes.ModifyMirror();
-                        Bindings.Mirror bcVarMirror = new Bindings.MirrorToBorderColor();
-                        bcVarMirror.setAction(Bindings.Mirror.ActionType.BIND);
-                        bcVarMirror.setCtrlName("box");
-                        bcVarMirror.setVarName("bc");
-                        modifyBcMirror.setMirror(bcVarMirror);
-                        codes.add(modifyBcMirror);
+                    Codes.ModifyMirror modifyTcMirror = new Codes.ModifyMirror();
+                    Bindings.Mirror tcVarMirror = new Bindings.MirrorToTextColor();
+                    tcVarMirror.setAction(Bindings.Mirror.ActionType.BIND);
+                    tcVarMirror.setCtrlName("box");
+                    tcVarMirror.setVarName("tc");
+                    modifyTcMirror.setMirror(tcVarMirror);
+                    codes.add(modifyTcMirror);
 
-                        Codes.ModifyMirror modifyTcMirror = new Codes.ModifyMirror();
-                        Bindings.Mirror tcVarMirror = new Bindings.MirrorToTextColor();
-                        tcVarMirror.setAction(Bindings.Mirror.ActionType.BIND);
-                        tcVarMirror.setCtrlName("box");
-                        tcVarMirror.setVarName("tc");
-                        modifyTcMirror.setMirror(tcVarMirror);
-                        codes.add(modifyTcMirror);
+                    Codes.Value rotation0Value = new Codes.Value();
+                    rotation0Value.setValueType(Codes.DataType.INT);
+                    rotation0Value.setValue(0);
 
-                        Codes.Value rotation0Value = new Codes.Value();
-                        rotation0Value.setValueType(Codes.DataType.INT);
-                        rotation0Value.setValue(0);
+                    Codes.Variable rotationVar = new Codes.Variable();
+                    rotationVar.setName("bannerRotation");
+                    rotationVar.setValue(rotation0Value);
 
-                        Codes.Variable rotationVar = new Codes.Variable();
-                        rotationVar.setName("bannerRotation");
-                        rotationVar.setValue(rotation0Value);
+                    Codes.Definition rotationDef = new Codes.Definition();
+                    rotationDef.setVariable(rotationVar);
+                    codes.add(rotationDef);
 
-                        Codes.Definition rotationDef = new Codes.Definition();
-                        rotationDef.setVariable(rotationVar);
-                        codes.add(rotationDef);
+                    Codes.ModifyMirror rotationMM = new Codes.ModifyMirror();
+                    Bindings.Mirror rotationMirror = new Bindings.MirrorToRotationY();
+                    rotationMirror.setAction(Bindings.Mirror.ActionType.BIND);
+                    rotationMirror.setVarName("bannerRotation");
+                    rotationMirror.setCtrlName("box");
+                    rotationMM.setMirror(rotationMirror);
+                    codes.add(rotationMM);
 
-                        Codes.ModifyMirror rotationMM = new Codes.ModifyMirror();
-                        Bindings.Mirror rotationMirror = new Bindings.MirrorToRotationY();
-                        rotationMirror.setAction(Bindings.Mirror.ActionType.BIND);
-                        rotationMirror.setVarName("bannerRotation");
-                        rotationMirror.setCtrlName("box");
-                        rotationMM.setMirror(rotationMirror);
-                        codes.add(rotationMM);
+                    Codes.Task task = new Codes.Task();
+                    task.setName("colorsTask");
+                    task.setPeriod(1000);
+                    task.setCodes(new ArrayList<>());
 
-                        Codes.Task task = new Codes.Task();
-                        task.setName("colorsTask");
-                        task.setPeriod(1000);
-                        task.setCodes(new ArrayList<>());
+                    Codes.Assignment colorFlagAssignmentNot = new Codes.Assignment();
+                    colorFlagAssignmentNot.setVariable(colorFlag);
+                    Codes.MathExpNot colorFlagNot = new Codes.MathExpNot();
+                    colorFlagNot.setCode(colorFlag);
+                    colorFlagAssignmentNot.setValue(colorFlagNot);
+                    task.getCodes().add(colorFlagAssignmentNot);
 
-                        Codes.Assignment colorFlagAssignmentNot = new Codes.Assignment();
-                        colorFlagAssignmentNot.setVariable(colorFlag);
-                        Codes.MathExpNot colorFlagNot = new Codes.MathExpNot();
-                        colorFlagNot.setCode(colorFlag);
-                        colorFlagAssignmentNot.setValue(colorFlagNot);
-                        task.getCodes().add(colorFlagAssignmentNot);
+                    Codes.If ifCode = new Codes.If();
+                    Codes.EQCompare eqCompare = new Codes.EQCompare();
+                    eqCompare.setItem1(colorFlag);
+                    eqCompare.setItem2(boolTrue);
+                    ifCode.setCondition(eqCompare);
+                    ifCode.setIfCodes(new ArrayList<>());
+                    ifCode.setElseCodes(new ArrayList<>());
 
-                        Codes.If ifCode = new Codes.If();
-                        Codes.EQCompare eqCompare = new Codes.EQCompare();
-                        eqCompare.setItem1(colorFlag);
-                        eqCompare.setItem2(boolTrue);
-                        ifCode.setCondition(eqCompare);
-                        ifCode.setIfCodes(new ArrayList<>());
-                        ifCode.setElseCodes(new ArrayList<>());
+                    Codes.Assignment bcVarBlackAssignment = new Codes.Assignment();
+                    bcVarBlackAssignment.setVariable(bcVar);
+                    bcVarBlackAssignment.setValue(colorBlack);
+                    ifCode.getIfCodes().add(bcVarBlackAssignment);
 
-                        Codes.Assignment bcVarBlackAssignment = new Codes.Assignment();
-                        bcVarBlackAssignment.setVariable(bcVar);
-                        bcVarBlackAssignment.setValue(colorBlack);
-                        ifCode.getIfCodes().add(bcVarBlackAssignment);
+                    Codes.Assignment tcVarWhiteAssignment = new Codes.Assignment();
+                    tcVarWhiteAssignment.setVariable(tcVar);
+                    tcVarWhiteAssignment.setValue(colorBlack);
+                    ifCode.getIfCodes().add(tcVarWhiteAssignment);
 
-                        Codes.Assignment tcVarWhiteAssignment = new Codes.Assignment();
-                        tcVarWhiteAssignment.setVariable(tcVar);
-                        tcVarWhiteAssignment.setValue(colorBlack);
-                        ifCode.getIfCodes().add(tcVarWhiteAssignment);
+                    Codes.Assignment bcVarWhiteAssignment = new Codes.Assignment();
+                    bcVarWhiteAssignment.setVariable(bcVar);
+                    bcVarWhiteAssignment.setValue(colorWhite);
+                    ifCode.getElseCodes().add(bcVarWhiteAssignment);
 
-                        Codes.Assignment bcVarWhiteAssignment = new Codes.Assignment();
-                        bcVarWhiteAssignment.setVariable(bcVar);
-                        bcVarWhiteAssignment.setValue(colorWhite);
-                        ifCode.getElseCodes().add(bcVarWhiteAssignment);
+                    Codes.Assignment tcVarBlackAssignment = new Codes.Assignment();
+                    tcVarBlackAssignment.setVariable(tcVar);
+                    tcVarBlackAssignment.setValue(colorWhite);
+                    ifCode.getElseCodes().add(tcVarBlackAssignment);
 
-                        Codes.Assignment tcVarBlackAssignment = new Codes.Assignment();
-                        tcVarBlackAssignment.setVariable(tcVar);
-                        tcVarBlackAssignment.setValue(colorWhite);
-                        ifCode.getElseCodes().add(tcVarBlackAssignment);
+                    task.getCodes().add(ifCode);
 
-                        task.getCodes().add(ifCode);
+                    Codes.Assignment rotationAssignment = new Codes.Assignment();
+                    rotationAssignment.setVariable(rotationVar);
+                    rotationAssignment.setValue(rotation0Value);
+                    task.getCodes().add(rotationAssignment);
 
-                        Codes.Assignment rotationAssignment = new Codes.Assignment();
-                        rotationAssignment.setVariable(rotationVar);
-                        rotationAssignment.setValue(rotation0Value);
-                        task.getCodes().add(rotationAssignment);
+                    Codes.PerformAnim performRotationAnim = new Codes.PerformAnim();
+                    Anims.ControlAnimRotationY rotationAnim = new Anims.ControlAnimRotationY();
+                    rotationAnim.setControlId("box");
+                    rotationAnim.setDuration(750);
+                    rotationAnim.setFinalValue(360);
+                    performRotationAnim.setAnim(rotationAnim);
+                    task.getCodes().add(performRotationAnim);
 
-                        Codes.PerformAnim performRotationAnim = new Codes.PerformAnim();
-                        Anims.ControlAnimRotationY rotationAnim = new Anims.ControlAnimRotationY();
-                        rotationAnim.setControlId("box");
-                        rotationAnim.setDuration(750);
-                        rotationAnim.setFinalValue(360);
-                        performRotationAnim.setAnim(rotationAnim);
-                        task.getCodes().add(performRotationAnim);
+                    Codes.DefineTask defineTask = new Codes.DefineTask();
+                    defineTask.setTask(task);
+                    codes.add(defineTask);
 
-                        Codes.DefineTask defineTask = new Codes.DefineTask();
-                        defineTask.setTask(task);
-                        codes.add(defineTask);
-
-                        if (spinning.get(userRequestedBotView.getComplexId())) {
-                            Codes.StartTask startTask = new Codes.StartTask();
-                            startTask.setTaskName("colorsTask");
-                            codes.add(startTask);
-                        }
-
-                        csmp.runCommandsOnBotView(
-                                userRequestedBotView.getComplexId(),
-                                userRequestedBotView.getRoomId(),
-                                userRequestedBotView.getUser().getBaseUserId(),
-                                codes);
+                    if (spinning.get(complexId)) {
+                        Codes.StartTask startTask = new Codes.StartTask();
+                        startTask.setTaskName("colorsTask");
+                        codes.add(startTask);
                     }
+
+                    csmp.runCommandsOnBotView(
+                            complexId,
+                            roomId,
+                            user.getBaseUserId(),
+                            codes);
                 });
     }
 
